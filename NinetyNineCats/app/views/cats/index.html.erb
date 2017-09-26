@@ -2,7 +2,8 @@
 
 <ul>
   <% @cats.each do |cat| %>
-    <%= render cat %>
+  <a href="<%= cat_url(cat) %>">
+    <%= render 'cat', cat: cat %>
     <% end %>
 
 </ul>

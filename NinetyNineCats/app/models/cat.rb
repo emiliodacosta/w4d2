@@ -21,7 +21,8 @@ class Cat < ApplicationRecord
   validates :sex, inclusion: { in: %w(M F), message: "%{value} is not a valid sex" }
 
   def age
-    cat_age = time_ago_in_words(:birth_date)
+
+    cat_age = time_ago_in_words(self.birth_date)
   end
 
 end
